@@ -1,0 +1,22 @@
+﻿<Window x:Class="FullTrade.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="FullTrade" Height="450" Width="800">
+    <DockPanel>
+        <StackPanel x:Name="ToolPanel" DockPanel.Dock="Top" Orientation="Horizontal" Margin="10">
+            <TextBox x:Name="SymbolTextBox" Width="100" Height="25" Margin="5" 
+                     VerticalContentAlignment="Center" Text="BTCUSDT"/>
+            <ComboBox x:Name="IntervalComboBox" Width="100" Height="25" Margin="5">
+                <ComboBoxItem>1m</ComboBoxItem>
+                <ComboBoxItem>5m</ComboBoxItem>
+                <ComboBoxItem>15m</ComboBoxItem>
+                <ComboBoxItem>1h</ComboBoxItem>
+                <ComboBoxItem>4h</ComboBoxItem>
+                <ComboBoxItem>1d</ComboBoxItem>
+            </ComboBox>
+            <Button x:Name="LoadDataButton" Content="Načíst data" Width="100" Height="25" 
+                    Margin="5" Click="LoadDataButton_Click"/>
+        </StackPanel>
+        <Canvas x:Name="ChartCanvas" Background="White"/>
+    </DockPanel>
+</Window>
